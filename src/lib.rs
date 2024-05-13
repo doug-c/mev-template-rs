@@ -21,6 +21,8 @@ pub struct Config {
     pub http: Arc<SignerMiddleware<Provider<Http>, Wallet<SigningKey>>>,
     #[allow(dead_code)]
     pub wss: Arc<Provider<Ws>>,
+    pub dex_factory: H160,
+    pub dex_router: H160,
 }
 
 impl Config {
@@ -31,9 +33,15 @@ impl Config {
 
         let ws_network = std::env::var("NETWORK_WSS").expect("missing NETWORK_WSS");
         let ws_provider: Provider<Ws> = Provider::<Ws>::connect(ws_network).await.unwrap();
+
+        let dex_factory:H160 = std::env::var("DEX_FACTORY").expect("missing DEX_FACTORY").parse().unwrap();
+        let dex_router: H160 = std::env::var("DEX_ROUTER").expect("missing DEX_ROUTER").parse().unwrap();
+
         Self {
             http: middleware,
             wss: Arc::new(ws_provider),
+            dex_factory,
+            dex_router,
         }
     }
 
@@ -47,9 +55,7 @@ pub async fn run() {
     let config = Config::new().await;
 
     // Example of how to interact with a contract.
-    let spooky_factory = address(SPOOKY_SWAP_FACTORY);
-    let spooky_router = address(SPOOKY_SWAP_ROUTER);
-    let dex = config.create_dex(spooky_factory, spooky_router).await;
+    let dex = config.create_dex(config.dex_factory, config.dex_router).await;
     dex.get_pairs().await;
 
     // Thread for checking what block we're on.
