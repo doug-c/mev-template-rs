@@ -8,10 +8,8 @@ pub mod uni;
 
 use std::sync::Arc;
 
-use address_book::*;
 use ethers::prelude::k256::ecdsa::SigningKey;
 use ethers::prelude::*;
-use helpers::address;
 
 use crate::dex::Dex;
 use crate::helpers::setup_signer;
@@ -36,7 +34,7 @@ impl Config {
 
         let dex_factory:H160 = std::env::var("DEX_FACTORY").expect("missing DEX_FACTORY").parse().unwrap();
         let dex_router: H160 = std::env::var("DEX_ROUTER").expect("missing DEX_ROUTER").parse().unwrap();
-
+        
         Self {
             http: middleware,
             wss: Arc::new(ws_provider),
