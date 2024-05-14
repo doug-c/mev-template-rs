@@ -14,6 +14,8 @@ use ethers::prelude::*;
 use crate::dex::Dex;
 use crate::helpers::setup_signer;
 
+use tracing::{Level, event};
+
 pub struct Config {
     #[allow(dead_code)]
     pub http: Arc<SignerMiddleware<Provider<Http>, Wallet<SigningKey>>>,
@@ -51,6 +53,24 @@ impl Config {
 /// Run the strategy here.
 pub async fn run() {
     let config = Config::new().await;
+
+    let file_appender = tracing_appender::rolling::never(".", "log.txt");
+    let (non_blocking, _guard) = tracing_appender::non_blocking(file_appender);
+    let subscriber = tracing_subscriber::FmtSubscriber::builder()
+        .with_max_level(tracing::Level::INFO) // Set the maximum log level
+        .compact() // Disable the log crate's own formatting
+        .with_file(true)
+        .with_line_number(true)
+        .with_thread_ids(true)
+        .with_target(false)
+        .with_writer(non_blocking) // Write logs to a file
+        .with_ansi(false) // Disable ANSI escape codes
+        .finish();
+
+    tracing::subscriber::set_global_default(subscriber)
+        .expect("setting default subscriber failed");
+
+    event!(Level::INFO, "Starting Sandbot ...");    
 
     // Example of how to interact with a contract.
     let dex = config.create_dex(config.dex_factory, config.dex_router).await;

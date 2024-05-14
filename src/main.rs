@@ -1,4 +1,4 @@
-use mev_template::run;
+use mev_rs::run;
 
 #[tokio::main]
 async fn main() {

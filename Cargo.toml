@@ -1,11 +1,11 @@
 [package]
-name = "mev-template"
+name = "mev-rs"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 # Interact w/ EVM blockchains.
-ethers = { git = "https://github.com/gakonst/ethers-rs", features = ["ws", "rustls", "abigen"] }
+ethers = { version = "2.0", features = ["abigen", "ws", "ipc"] }
 
 # Loading .env variables.
 dotenv = "0.15.0"
@@ -15,3 +15,8 @@ tokio = { version = "1.5", features = ["macros", "rt-multi-thread"] }
 
 # For quick and easy discord alerts.
 reqwest = "0.11.10"
+
+# Tracing
+tracing = "0.1"
+tracing-subscriber = "0.3.18"
+tracing-appender = "0.2"

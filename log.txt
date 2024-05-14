@@ -1,0 +1,354 @@
+2024-05-14T02:29:06.637870Z  INFO ThreadId(01) src/lib.rs:73: Starting Sandbot ...
+2024-05-14T13:16:31.128828Z  INFO ThreadId(01) src/lib.rs:73: Starting Sandbot ...
+2024-05-14T13:16:31.349414Z  INFO ThreadId(01) src/mempool.rs:17: ---------- MONITORING MEMPOOL ----------
+2024-05-14T13:16:44.880370Z  INFO ThreadId(01) src/mempool.rs:21: Transaction: Transaction {
+    hash: 0x4c6a35b537476b77e7d09bbe70a833d52f552917e911e200f091decf1b4af083,
+    nonce: 192935,
+    block_hash: Some(
+        0xeb102a9b54b54eba04f40e29dc8cd08aeca8023c63cab12894fe4fecd1faa42a,
+    ),
+    block_number: Some(
+        45429747,
+    ),
+    transaction_index: Some(
+        2,
+    ),
+    from: 0x88928ff265a144aef2c5e228d536d9e477a68cfc,
+    to: Some(
+        0xe54ca86531e17ef3616d22ca28b0d458b6c89106,
+    ),
+    value: 0,
+    gas_price: Some(
+        28810000000,
+    ),
+    gas: 500000,
+    input: Bytes(0x38ed1739000000000000000000000000000000000000000000000000b2f105ce384cdf0e0000000000000000000000000000000000000000000000000201dc3decf8e41f00000000000000000000000000000000000000000000000000000000000000a000000000000000000000000088928ff265a144aef2c5e228d536d9e477a68cfc00000000000000000000000000000000000000000000000000000000664366890000000000000000000000000000000000000000000000000000000000000002000000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c700000000000000000000000049d5c2bdffac6ce2bfdb6640f4f80f226bc10bab),
+    v: 86263,
+    r: 93477416432568292200307729119905672510573677902612253511187681506883330361730,
+    s: 178686392576530586625167611257543401131964443048635600102216882783215218724,
+    transaction_type: Some(
+        0,
+    ),
+    access_list: None,
+    max_priority_fee_per_gas: None,
+    max_fee_per_gas: None,
+    chain_id: Some(
+        43114,
+    ),
+    other: OtherFields {
+        inner: {},
+    },
+}
+Router Call: SwapExactTokensForTokens(
+    SwapExactTokensForTokensCall {
+        amount_in: 12894093591404404494,
+        amount_out_min: 144638821579416607,
+        path: [
+            0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7,
+            0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab,
+        ],
+        to: 0x88928ff265a144aef2c5e228d536d9e477a68cfc,
+        deadline: 1715693193,
+    },
+)
+
+2024-05-14T13:21:56.353763Z  INFO ThreadId(01) src/lib.rs:73: Starting Sandbot ...
+2024-05-14T13:21:56.356512Z  INFO ThreadId(01) src/dex.rs:42: Calling allPairsLength from 0x9e5a…799c
+2024-05-14T13:21:56.467290Z  INFO ThreadId(01) src/dex.rs:45:    ~ [PASS] Total pairs: 52
+2024-05-14T13:21:56.578672Z  INFO ThreadId(01) src/mempool.rs:17: ---------- MONITORING MEMPOOL ----------
+2024-05-14T13:21:56.581697Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429898 ----------
+2024-05-14T13:21:57.965811Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429899 ----------
+2024-05-14T13:22:00.202494Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429900 ----------
+2024-05-14T13:22:01.676865Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429901 ----------
+2024-05-14T13:22:03.700552Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429902 ----------
+2024-05-14T13:22:05.731621Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429903 ----------
+2024-05-14T13:22:08.093315Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429904 ----------
+2024-05-14T13:22:09.231797Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429905 ----------
+2024-05-14T13:22:11.721703Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429906 ----------
+2024-05-14T13:22:13.736129Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429907 ----------
+2024-05-14T13:22:16.189189Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429908 ----------
+2024-05-14T13:22:17.667614Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429909 ----------
+2024-05-14T13:22:19.909116Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429910 ----------
+2024-05-14T13:22:19.952603Z  INFO ThreadId(01) src/mempool.rs:21: Transaction: Transaction {
+    hash: 0x63725b8db43e79f9d5aa4a2ea1e0d2197ef8726122c6a4a6f62ff3840ee410fa,
+    nonce: 762,
+    block_hash: Some(
+        0x8051c148c894a9a7635c3b18312f7208eed609527ee2799c64421092194dddeb,
+    ),
+    block_number: Some(
+        45429910,
+    ),
+    transaction_index: Some(
+        0,
+    ),
+    from: 0x88cd1eb72edb3684e70ddad4890307fb29d439e5,
+    to: Some(
+        0x117e288ed48a32bd0f5dcd01aee571c3f29ce851,
+    ),
+    value: 0,
+    gas_price: Some(
+        30000000000,
+    ),
+    gas: 182956,
+    input: Bytes(0x5c11d7950000000000000000000000000000000000000000000000025fc36d7807b63706000000000000000000000000000000000000000000000000000000000000003200000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c000000000000000000000000c3009d402a512cee79399f125502a0308270afc50000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c3009d402a512cee79399f125502a0308270afc5000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c),
+    v: 86263,
+    r: 79581488015506524103294234110166036675108370150596926912946296645107929291089,
+    s: 45400810090044232291386702168039894555639456638061753174421589231974055113923,
+    transaction_type: Some(
+        0,
+    ),
+    access_list: None,
+    max_priority_fee_per_gas: None,
+    max_fee_per_gas: None,
+    chain_id: Some(
+        43114,
+    ),
+    other: OtherFields {
+        inner: {},
+    },
+}
+Router Call: SwapExactTokensForTokensSupportingFeeOnTransferTokens(
+    SwapExactTokensForTokensSupportingFeeOnTransferTokensCall {
+        amount_in: 43793967563773720326,
+        amount_out_min: 50,
+        path: [
+            0xc3009d402a512cee79399f125502a0308270afc5,
+            0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c,
+        ],
+        to: 0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c,
+        deadline: 1113266898773860539712598610701623438669023064005,
+    },
+)
+
+2024-05-14T13:22:23.504564Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429911 ----------
+2024-05-14T13:22:24.192102Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429912 ----------
+2024-05-14T13:22:29.374334Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429913 ----------
+2024-05-14T13:22:29.601030Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429914 ----------
+2024-05-14T13:22:30.069296Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429915 ----------
+2024-05-14T13:22:32.104595Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429916 ----------
+2024-05-14T13:22:33.784590Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429917 ----------
+2024-05-14T13:22:36.591924Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429918 ----------
+2024-05-14T13:22:37.705200Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429919 ----------
+2024-05-14T13:22:37.872943Z  INFO ThreadId(01) src/mempool.rs:21: Transaction: Transaction {
+    hash: 0xac754bfd568121f1d3717dd5cf5dc971ae621cf86ab9f5d30971c452e7d1dd3a,
+    nonce: 768,
+    block_hash: Some(
+        0xb0c2afaaf363b999ebf4f35eac64182b9426ce5c451276d4929e2376dbc9b59b,
+    ),
+    block_number: Some(
+        45429919,
+    ),
+    transaction_index: Some(
+        1,
+    ),
+    from: 0xf8a01bd3ed54919ff7ae7a1f4a2d47a3c78f4b10,
+    to: Some(
+        0x117e288ed48a32bd0f5dcd01aee571c3f29ce851,
+    ),
+    value: 0,
+    gas_price: Some(
+        30000000000,
+    ),
+    gas: 196033,
+    input: Bytes(0x5c11d7950000000000000000000000000000000000000000000000027eab5c300af730c7000000000000000000000000000000000000000000000000000000000000003200000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c000000000000000000000000c3009d402a512cee79399f125502a0308270afc50000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c3009d402a512cee79399f125502a0308270afc5000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c),
+    v: 86264,
+    r: 29752629783211405550622828458739076211924306218667644991742408148271285738116,
+    s: 14648849074264944512077319077923884511928201402189942435589241302838278369572,
+    transaction_type: Some(
+        0,
+    ),
+    access_list: None,
+    max_priority_fee_per_gas: None,
+    max_fee_per_gas: None,
+    chain_id: Some(
+        43114,
+    ),
+    other: OtherFields {
+        inner: {},
+    },
+}
+Router Call: SwapExactTokensForTokensSupportingFeeOnTransferTokens(
+    SwapExactTokensForTokensSupportingFeeOnTransferTokensCall {
+        amount_in: 46020978578627702983,
+        amount_out_min: 50,
+        path: [
+            0xc3009d402a512cee79399f125502a0308270afc5,
+            0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c,
+        ],
+        to: 0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c,
+        deadline: 1113266898773860539712598610701623438669023064005,
+    },
+)
+
+2024-05-14T13:22:39.720602Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429920 ----------
+2024-05-14T13:22:41.797665Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429921 ----------
+2024-05-14T13:22:44.253840Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429922 ----------
+2024-05-14T13:22:45.495338Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429923 ----------
+2024-05-14T13:22:47.844390Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429924 ----------
+2024-05-14T13:22:49.553380Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429925 ----------
+2024-05-14T13:22:53.511399Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429926 ----------
+2024-05-14T13:22:53.857150Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429927 ----------
+2024-05-14T13:22:55.667381Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429928 ----------
+2024-05-14T13:22:57.704325Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429929 ----------
+2024-05-14T13:23:00.062943Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429930 ----------
+2024-05-14T13:23:01.776915Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429931 ----------
+2024-05-14T13:23:03.899134Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429932 ----------
+2024-05-14T13:23:06.129964Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429933 ----------
+2024-05-14T13:23:07.825125Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429934 ----------
+2024-05-14T13:23:10.443419Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429935 ----------
+2024-05-14T13:23:11.917395Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429936 ----------
+2024-05-14T13:23:11.950343Z  INFO ThreadId(01) src/mempool.rs:21: Transaction: Transaction {
+    hash: 0x8b71397aed2a257277165481b806acc0793e498d698dfedee01319d41d05e57a,
+    nonce: 301000,
+    block_hash: Some(
+        0x59a4cd83aec5c46b7ee728db92c7708ffdf5a6834f55bcb525ed8a1b5b43f66a,
+    ),
+    block_number: Some(
+        45429936,
+    ),
+    transaction_index: Some(
+        0,
+    ),
+    from: 0x2aa6845f7e84b2cc1619c823bf4f6b04ec733f2c,
+    to: Some(
+        0xe54ca86531e17ef3616d22ca28b0d458b6c89106,
+    ),
+    value: 0,
+    gas_price: Some(
+        28350000000,
+    ),
+    gas: 200000,
+    input: Bytes(0x38ed173900000000000000000000000000000000000000000000000087f384e8f611d6b10000000000000000000000000000000000000000000003ad22543b6f7951bc5c00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000002aa6845f7e84b2cc1619c823bf4f6b04ec733f2c000000000000000000000000000000000000000000000000000000006643680c0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c70000000000000000000000008729438eb15e2c8b576fcc6aecda6a148776c0f5),
+    v: 86264,
+    r: 85391797373013770668913700839044963032503974072108148314282602665267793169472,
+    s: 45170517589118524168110799585392228481480877314930228658646470514550425787736,
+    transaction_type: Some(
+        0,
+    ),
+    access_list: None,
+    max_priority_fee_per_gas: None,
+    max_fee_per_gas: None,
+    chain_id: Some(
+        43114,
+    ),
+    other: OtherFields {
+        inner: {},
+    },
+}
+Router Call: SwapExactTokensForTokens(
+    SwapExactTokensForTokensCall {
+        amount_in: 9796319750556604081,
+        amount_out_min: 17360859840805984123996,
+        path: [
+            0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7,
+            0x8729438eb15e2c8b576fcc6aecda6a148776c0f5,
+        ],
+        to: 0x2aa6845f7e84b2cc1619c823bf4f6b04ec733f2c,
+        deadline: 1715693580,
+    },
+)
+
+2024-05-14T13:23:12.058368Z  INFO ThreadId(01) src/mempool.rs:21: Transaction: Transaction {
+    hash: 0x9c16fb290609e0e6d80179ab80caeb75d3ca4b56fc87a1d15d11fa705f76b9bc,
+    nonce: 301001,
+    block_hash: Some(
+        0x59a4cd83aec5c46b7ee728db92c7708ffdf5a6834f55bcb525ed8a1b5b43f66a,
+    ),
+    block_number: Some(
+        45429936,
+    ),
+    transaction_index: Some(
+        1,
+    ),
+    from: 0x2aa6845f7e84b2cc1619c823bf4f6b04ec733f2c,
+    to: Some(
+        0x60ae616a2155ee3d9a68541ba4544862310933d4,
+    ),
+    value: 0,
+    gas_price: Some(
+        28350000000,
+    ),
+    gas: 200000,
+    input: Bytes(0x38ed1739000000000000000000000000000000000000000000000000f229c4c034b7a5e700000000000000000000000000000000000000000000068c8f0ec96d5848eb4b00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000002aa6845f7e84b2cc1619c823bf4f6b04ec733f2c000000000000000000000000000000000000000000000000000000006643680c0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c70000000000000000000000008729438eb15e2c8b576fcc6aecda6a148776c0f5),
+    v: 86263,
+    r: 64319537523311121953366833366256434292741128426595687096544593494525414698407,
+    s: 32366238766528640206029801898048930896605491896762826328028758433429520262536,
+    transaction_type: Some(
+        0,
+    ),
+    access_list: None,
+    max_priority_fee_per_gas: None,
+    max_fee_per_gas: None,
+    chain_id: Some(
+        43114,
+    ),
+    other: OtherFields {
+        inner: {},
+    },
+}
+Router Call: SwapExactTokensForTokens(
+    SwapExactTokensForTokensCall {
+        amount_in: 17449694561020913127,
+        amount_out_min: 30927051465605775944523,
+        path: [
+            0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7,
+            0x8729438eb15e2c8b576fcc6aecda6a148776c0f5,
+        ],
+        to: 0x2aa6845f7e84b2cc1619c823bf4f6b04ec733f2c,
+        deadline: 1715693580,
+    },
+)
+
+2024-05-14T13:23:13.840486Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429937 ----------
+2024-05-14T13:23:15.547855Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429938 ----------
+2024-05-14T13:23:17.698063Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429939 ----------
+2024-05-14T13:23:19.860067Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429940 ----------
+2024-05-14T13:23:21.673547Z  INFO ThreadId(07) src/block_scanner.rs:14: 
+---------- BLOCK: 45429941 ----------
+2024-05-14T13:23:23.934475Z  INFO ThreadId(09) src/block_scanner.rs:14: 
+---------- BLOCK: 45429942 ----------
+2024-05-14T13:23:25.507575Z  INFO ThreadId(06) src/block_scanner.rs:14: 
+---------- BLOCK: 45429943 ----------

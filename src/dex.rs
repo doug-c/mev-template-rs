@@ -4,6 +4,8 @@ use ethers::prelude::{abi::AbiDecode, k256::ecdsa::SigningKey, *};
 
 use crate::address_book::{UniV2Factory, UniV2Router, UniV2RouterCalls};
 
+use tracing::{Level, event};
+
 #[allow(dead_code)]
 pub struct Dex {
     factory_address: Address,
@@ -32,19 +34,18 @@ impl Dex {
     pub async fn decode_router_tx_data(&self, tx_data: String) {
         let calldata: Bytes = tx_data.parse().unwrap();
         let decoded = UniV2RouterCalls::decode(&calldata).unwrap();
-        println!("Decoded dex tx: {:?}", decoded);
+        event!(Level::INFO, "Decoded dex tx: {:?}", decoded);
     }
 
     /// Attempts to retrieve the total pairs created from the dex's factory.
     pub async fn get_pairs(&self) {
-        println!("Calling allPairsLength from {}", self.factory_address);
-        dbg!(self.factory.address());
+        event!(Level::INFO, "Calling allPairsLength from {}", self.factory_address);
         match self.factory.all_pairs_length().call().await {
             Ok(result) => {
-                println!("   ~ [PASS] Total pairs: {:?}", result)
+                event!(Level::INFO, "   ~ [PASS] Total pairs: {:?}", result)
             }
             Err(e) => {
-                println!("   ~ [FAIL] Total pairs: {:?}", e)
+                event!(Level::INFO, "   ~ [FAIL] Total pairs: {:?}", e)
             }
         }
     }
@@ -59,12 +60,7 @@ impl Dex {
 
         println!("Listening for PairCreated events, from {}", self.factory_address);
         while let Some(log) = stream.next().await {
-            println!(
-                "   ~ [FOUND] Hash {:?}\nLog: {:?}",
-                log.transaction_hash,
-                log.data,
-                // PsNewSale::decode(log.data)
-            );
+            event!(Level::INFO, "   ~ [FOUND] Hash {:?}\nLog: {:?}", log.transaction_hash, log.data);
         }
     }
 }
